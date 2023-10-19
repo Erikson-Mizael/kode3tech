@@ -32,15 +32,6 @@ backend:
     connection: ':memory:'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
-integrations:
-  azure:
-    - host: dev.azure.com
-      token: 35ryyjbq2evkgjxw5bhdez6e2imjjtm4kmzzctvmcvz4i2r62hpq
-      organization: kode3tech
-    ### Example for how to add your GitHub Enterprise instance using the API:
-    # - host: ghe.example.net
-    #   apiBaseUrl: https://ghe.example.net/api/v3
-    #   token: ${GHE_TOKEN}
 
 proxy:
   ### Example for how to add a proxy endpoint for the frontend.
@@ -60,15 +51,6 @@ techdocs:
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
-auth:
-  # see https://backstage.io/docs/auth/ to learn about auth providers
-  environment: development
-  providers:
-    microsoft:
-      development:
-        clientId: a67a09f1-27e7-4dcc-9454-232df59aa2ae
-        clientSecret: 'rq48Q~1MKV4vQOMfLn8yUdv1ZLEfYgvACOlC0cuj'
-        tenantId: 20f29df5-8db1-4017-a9c4-5d81cb5a0369
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
@@ -77,6 +59,22 @@ azureDevOps:
   host: dev.azure.com
   token: 35ryyjbq2evkgjxw5bhdez6e2imjjtm4kmzzctvmcvz4i2r62hpq
   organization: kode3tech
+
+integrations:
+  azure:
+    - host: dev.azure.com
+      token: 35ryyjbq2evkgjxw5bhdez6e2imjjtm4kmzzctvmcvz4i2r62hpq
+      organization: kode3tech
+
+auth:
+  # see https://backstage.io/docs/auth/ to learn about auth providers
+  environment: development
+  providers:
+    microsoft:
+      development:
+        clientId: a67a09f1-27e7-4dcc-9454-232df59aa2ae
+        clientSecret: rq48Q~1MKV4vQOMfLn8yUdv1ZLEfYgvACOlC0cuj
+        tenantId: 20f29df5-8db1-4017-a9c4-5d81cb5a0369
 
 catalog:
   providers:
